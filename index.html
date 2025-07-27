@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>South Flavors</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: black;
+    }
+
+    /* Hover animation for navbar items */
+    .navbar-nav .nav-link {
+      position: relative;
+      transition: color 0.3s;
+    }
+
+    .navbar .nav-link {
+      color: white !important;
+    }
+
+    .navbar .nav-link:hover {
+      color: #ffc107 !important;
+      /* Optional: highlight on hover */
+    }
+
+    .navbar-nav .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background: white;
+      left: 0;
+      bottom: 0;
+      transition: 0.4s ease;
+    }
+
+    .navbar-nav .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .navbar-brand {
+      animation: popIn 1.5s ease-in-out;
+      color: whitesmoke !important;
+    }
+
+    @keyframes popIn {
+      0% {
+        opacity: 0;
+        transform: scale(0.5);
+      }
+
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+
+   
+.hero {
+  height: 100vh;
+  background: url('./image/non\ veg\ .jpg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 2px 2px 4px black;
+}
+
+
+
+    .menu-btns {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #000;
+      padding: 1rem;
+    }
+
+    .menu-card {
+      width: 250px;
+      height: 100px;
+      overflow: hidden;
+      margin: auto;
+      border-radius: 10px;
+    }
+
+    .card-img {
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px 10px 0 0;
+    }
+
+    .card-body {
+      height: 130px;
+      padding: 0.5rem;
+    }
+
+
+
+
+    .order-price {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold text-white" href="#">🍛 SPICE FOOD</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+        <ul class="navbar-nav me-3">
+          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="#reservation">Reservation</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+
+        <!-- Buttons for Login, Register -->
+        <div class="d-flex gap-2">
+          <a href="login.html" class="btn btn-outline-light btn-sm">Login</a>
+          <a href="register.html" class="btn btn-warning btn-sm">Register</a>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+
+
+
+
+
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <h1 class="display-3 fw-bold">Welcome to South Flavors</h1>
+  </div>
+
+  <!-- MENU SECTION -->
+  <section id="menu" class="py-5">
+    <div class="container">
+      <h2 class="text-center text-white mb-4">Our Menu</h2>
+
+      <!-- CATEGORY LINKS -->
+      <div class="d-flex justify-content-center mb-4 gap-3 flex-wrap">
+        <a href="#starter" class="btn btn-outline-danger">Starter</a>
+        <a href="#biryani" class="btn btn-outline-danger">Biryani</a>
+        <a href="#semigravy" class="btn btn-outline-danger">Semi Gravy</a>
+        <a href="#beverages" class="btn btn-outline-danger">Beverages</a>
+        <a href="#desserts" class="btn btn-outline-danger">Desserts</a>
+      </div>
+
+      <!-- STARTERS SECTION -->
+      <section id="starter" class="py-5 bg-black text-white">
+        <div class="container">
+          <h2 class="text-center mb-4 text-white">Starters</h2>
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+
+            <!-- CARD 1 -->
+            <div class="col">
+              <div class="card h-100 text-center" style="height: 320px; width: 100%; max-width: 280px; margin: auto;">
+                <img src="./image/Chicken-65.jpg" class="card-img-top" style="height: 140px; object-fit: cover;"
+                  alt="Chicken 56">
+                <div class="card-body p-2 d-flex flex-column">
+                  <h6 class="card-title mb-1">Chicken 56</h6>
+                  <p class="card-text small">Spicy Indo-Chinese chicken delight.</p>
+                  <div class="mt-auto d-flex justify-content-between align-items-center px-2">
+                    <span class="fw-bold">₹100</span>
+                    <a href="#" class="btn btn-sm btn-danger">Order</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="col">
+              <div class="card h-100 text-center" style="height: 320px; width: 100%; max-width: 280px; margin: auto;">
+                <img src="./image/podi.jpg" class="card-img-top" style="height: 140px; object-fit: cover;"
+                  alt="Egg Fry">
+                <div class="card-body p-2 d-flex flex-column">
+                  <h6 class="card-title mb-1">Egg Fry</h6>
+                  <p class="card-text small">Pan-fried eggs in masala.</p>
+                  <div class="mt-auto d-flex justify-content-between align-items-center px-2">
+                    <span class="fw-bold">₹80</span>
+                    <a href="#" class="btn btn-sm btn-danger">Order</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="col">
+              <div class="card h-100 text-center" style="height: 320px; width: 100%; max-width: 280px; margin: auto;">
+                <img src="./image/fish.jpg" class="card-img-top" style="height: 140px; object-fit: cover;"
+                  alt="Fish Fry">
+                <div class="card-body p-2 d-flex flex-column">
+                  <h6 class="card-title mb-1">Fish Fry</h6>
+                  <p class="card-text small">Crispy fish in South Indian style.</p>
+                  <div class="mt-auto d-flex justify-content-between align-items-center px-2">
+                    <span class="fw-bold">₹150</span>
+                    <a href="#" class="btn btn-sm btn-danger">Order</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 4 -->
+            <div class="col">
+              <div class="card h-100 text-center" style="height: 320px; width: 100%; max-width: 280px; margin: auto;">
+                <img src="./image/Mutton-kola.jpg" class="card-img-top" style="height: 140px; object-fit: cover;"
+                  alt="Paneer Tikka">
+                <div class="card-body p-2 d-flex flex-column">
+                  <h6 class="card-title mb-1">Mutton Kola Urundai</h6>
+                  <p class="card-text small">Traditional Chettinad-style fried mutton balls made with spices and lentils.</p>
+                  <div class="mt-auto d-flex justify-content-between align-items-center px-2">
+                    <span class="fw-bold">₹280</span>
+                    <a href="#" class="btn btn-sm btn-danger">Order</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 5 -->
+            <div class="col">
+              <div class="card h-100 text-center" style="height: 320px; width: 100%; max-width: 280px; margin: auto;">
+                <img src="./image/Chicken Lollipop.jpg" class="card-img-top" style="height: 140px; object-fit: cover;"
+                  alt="Chicken 65">
+                <div class="card-body p-2 d-flex flex-column">
+                  <h6 class="card-title mb-1">Chicken Lollipop</h6>
+                  <p class="card-text small">Frenched chicken wings deep-fried and coated with tangy Indo-Chinese sauce</p>
+                  <div class="mt-auto d-flex justify-content-between align-items-center px-2">
+                    <span class="fw-bold">₹110</span>
+                    <a href="#" class="btn btn-sm btn-danger">Order</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 6 -->
+            <div class="col">
+              <div class="card h-100 text-center" style="height: 320px; width: 100%; max-width: 280px; margin: auto;">
+                <img src="./image/nethili-fry.jpg" class="card-img-top" style="height: 140px; object-fit: cover;"
+                  alt="Mutton Soup">
+                <div class="card-body p-2 d-flex flex-column">
+                  <h6 class="card-title mb-1">Nethili Fry</h6>
+                  <p class="card-text small">Anchovies marinated in turmeric and chili, then shallow-fried to perfection.</p>
+                  <div class="mt-auto d-flex justify-content-between align-items-center px-2">
+                    <span class="fw-bold">₹90</span>
+                    <a href="#" class="btn btn-sm btn-danger">Order</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 7 -->
+            <div class="col">
+              <div class="card h-100 text-center" style="height: 320px; width: 100%; max-width: 280px; margin: auto;">
+                <img src="./image/milagu-kozhi-varuval.jpg" class="card-img-top" style="height: 140px; object-fit: cover;"
+                  alt="Gobi Manchurian">
+                <div class="card-body p-2 d-flex flex-column">
+                  <h6 class="card-title mb-1">Kozhi Milagu Varuval </h6>
+                  <p class="card-text small">Roasted chicken chunks with aromatic black pepper and garlic.</p>
+                  <div class="mt-auto d-flex justify-content-between align-items-center px-2">
+                    <span class="fw-bold">₹200</span>
+                    <a href="#" class="btn btn-sm btn-danger">Order</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 8 -->
+            <div class="col">
+              <div class="card h-100 text-center" style="height: 320px; width: 100%; max-width: 280px; margin: auto;">
+                <img src="./image/Prawn-65.jpg" class="card-img-top" style="height: 140px; object-fit: cover;"
+                  alt="Prawn 65">
+                <div class="card-body p-2 d-flex flex-column">
+                  <h6 class="card-title mb-1">Prawn 65</h6>
+                  <p class="card-text small">Spicy fried prawns South Indian style.</p>
+                  <div class="mt-auto d-flex justify-content-between align-items-center px-2">
+                    <span class="fw-bold">260</span>
+                    <a href="#" class="btn btn-sm btn-danger">Order</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 9 -->
+            <div class="col">
+              <div class="card h-200 text-center" style="height: 320px; width: 100%; max-width: 280px; margin: auto;">
+                <img src="./image/turkey.jpg" class="card-img-top" style="height: 140px; object-fit: cover;"
+                  alt="Veg Soup">
+                <div class="card-body p-2 d-flex flex-column">
+                  <h6 class="card-title mb-1">Turkey Varuval</h6>
+                  <p class="card-text small">Traditional dry-fried turkey dish with a touch of fennel, red chili, and coconut.</p>
+                  <div class="mt-auto d-flex justify-content-between align-items-center px-2">
+                    <span class="fw-bold">₹350</span>
+                    <a href="#" class="btn btn-sm btn-danger">Order</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+
+
+
+      <!-- BIRYANI SECTION -->
+      <section id="biryani" class="py-5 bg-black text-white">
+        <div class="container">
+          <h2 class="text-center mb-4 text-white">Biryani</h2>
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+
+            <!-- CARD 1 -->
+            <div class="col">
+              <div class="card h-100 text-center" style="height: 320px; width: 100%; max-width: 280px; margin: auto;">
+                <img src="./image/plain.jpg" class="card-img-top" style="height: 140px; object-fit: cover;"
+                  alt="Chicken Biryani">
+                <div class="card-body p-2 d-flex flex-column">
+                  <h6 class="card-title mb-1">Plain Biryani</h6>
+                  <p class="card-text small">Fragrant basmati rice cooked with mild spices, herbs, and no meat</p>
+                  <div class="mt-auto d-flex justify-content-between align-items-center px-2">
+                    <span class="fw-bold">₹110</span>
+                    <a href="#" class="btn btn-sm btn-danger">Order</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="col">
+              <div class="card h-100 text-center" style="height: 320px; width: 100%; max-width: 280px; margin: auto;">
+                <img src="./image/egg biryani.jpg" class="card-img-top" style="height: 140px; object-fit: cover;"
+                  alt="Mutton Biryani">
+                <div class="card-body p-2 d-flex flex-column">
+                  <h6 class="card-title mb-1">Egg Biryani</h6>
+                  <p class="card-text small">Spiced boiled eggs nestled in a bed of flavorful biryani rice</p>
+                  <div class="mt-auto d-flex justify-content-between align-items-center px-2">
+                    <span class="fw-bold">₹130</span>
+                    <a href="#" class="btn btn-sm btn-danger">Order</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="col">
+              <div class="card h-100 text-center" style="height: 320px; width: 100%; max-width: 280px; margin: auto;">
+                <img src="./image/Chicken Biryani.jpg" class="card-img-top" style="height: 140px; object-fit: cover;"
+                  alt="Egg Biryani">
+                <div class="card-body p-2 d-flex flex-column">
+                  <h6 class="card-title mb-1">Chicken Biryani</h6>
+                  <p class="card-text small">Tender chicken simmered in rich masala and layered with aromatic basmati rice.</p>
+                  <div class="mt-auto d-flex justify-content-between align-items-center px-2">
+                    <span class="fw-bold">₹190</span>
+                    <a href="#" class="btn btn-sm btn-danger">Order</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 4 -->
+            <div class="col">
+              <div class="card h-100 text-center" style="height: 320px; width: 100%; max-width: 280px; margin: auto;">
+                <img src="./image/beef biryani.jpg" class="card-img-top" style="height: 140px; object-fit: cover;"
+                  alt="Prawn Biryani">
+                <div class="card-body p-2 d-flex flex-column">
+                  <h6 class="card-title mb-1">Beef Biryani</h6>
+                  <p class="card-text small">Slow-cooked beef chunks infused with traditional spices</p>
+                  <div class="mt-auto d-flex justify-content-between align-items-center px-2">
+                    <span class="fw-bold">₹400</span>
+                    <a href="#" class="btn btn-sm btn-danger">Order</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 5 -->
+            <div class="col">
+              <div class="card h-100 text-center" style="height: 320px; width: 100%; max-width: 280px; margin: auto;">
+                <img src="./image/turkey_biryani.jpg" class="card-img-top" style="height: 140px; object-fit: cover;"
+                  alt="Veg Biryani">
+                <div class="card-body p-2 d-flex flex-column">
+                  <h6 class="card-title mb-1">Turkey Biryani</h6>
+                  <p class="card-text small">A festive twist with juicy turkey pieces cooked in spiced masala and basmati rice.</p>
+                  <div class="mt-auto d-flex justify-content-between align-items-center px-2">
+                    <span class="fw-bold">₹290</span>
+                    <a href="#" class="btn btn-sm btn-danger">Order</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 6 -->
+            <div class="col">
+              <div class="card h-100 text-center" style="height: 320px; width: 100%; max-width: 280px; margin: auto;">
+                <img src="./image/fish biryani.jpg" class="card-img-top" style="height: 140px; object-fit: cover;"
+                  alt="Paneer Biryani">
+                <div class="card-body p-2 d-flex flex-column">
+                  <h6 class="card-title mb-1">Fish Biryani</h6>
+                  <p class="card-text small">Rich and bold — fish simmered in fiery masala and layered with ghee rice.</p>
+                  <div class="mt-auto d-flex justify-content-between align-items-center px-2">
+                    <span class="fw-bold">₹290</span>
+                    <a href="#" class="btn btn-sm btn-danger">Order</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 7 -->
+            <div class="col">
+              <div class="card h-100 text-center" style="height: 320px; width: 100%; max-width: 280px; margin: auto;">
+                <img src="./image/Mutton Biryani.jpg" class="card-img-top" style="height: 140px; object-fit: cover;"
+                  alt="Hyderabadi Biryani">
+                <div class="card-body p-2 d-flex flex-column">
+                  <h6 class="card-title mb-1">Mutton Biryani</h6>
+                  <p class="card-text small">Succulent mutton pieces cooked to perfection</p>
+                  <div class="mt-auto d-flex justify-content-between align-items-center px-2">
+                    <span class="fw-bold">₹300</span>
+                    <a href="#" class="btn btn-sm btn-danger">Order</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 8 -->
+            <div class="col">
+              <div class="card h-100 text-center" style="height: 320px; width: 100%; max-width: 280px; margin: auto;">
+                <img src="./image/Chicken 65 biryani.jpg" class="card-img-top" style="height: 140px; object-fit: cover;"
+                  alt="Keema Biryani">
+                <div class="card-body p-2 d-flex flex-column">
+                  <h6 class="card-title mb-1">Chicken 65 Biryani</h6>
+                  <p class="card-text small">Crispy Chicken 65 tossed into spicy biryani rice for a flavorful fusion experience.</p>
+                  <div class="mt-auto d-flex justify-content-between align-items-center px-2">
+                    <span class="fw-bold">₹260</span>
+                    <a href="#" class="btn btn-sm btn-danger">Order</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 9 -->
+            <div class="col">
+              <div class="card h-100 text-center" style="height: 320px; width: 100%; max-width: 280px; margin: auto;">
+                <img src="./image/prawn-biryani.jpg" class="card-img-top" style="height: 140px; object-fit: cover;"
+                  alt="Special Biryani">
+                <div class="card-body p-2 d-flex flex-column">
+                  <h6 class="card-title mb-1">Prawn Biryani</h6>
+                  <p class="card-text small">Juicy prawns cooked in coconut-spiced gravy and layered with aromatic rice.</p>
+                  <div class="mt-auto d-flex justify-content-between align-items-center px-2">
+                    <span class="fw-bold">₹200</span>
+                    <a href="#" class="btn btn-sm btn-danger">Order</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+
+      <!-- SEMI GRAVY SECTION -->
+      <section id="semigravy" class="py-5 bg-black text-white">
+        <div class="container">
+          <h2 class="text-center mb-4 text-white">Semi Gravy</h2>
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+
+            <!-- CARD 1 -->
+            <div class="col">
+              <div class="card text-center" style="height: 320px; width: 100%; max-width: 280px; margin: auto;">
+                <img src="./image/beef masala.jpg" class="card-img-top" style="height: 140px; object-fit: cover;"
+                  alt="Chicken Masala">
+                <div class="card-body p-2 d-flex flex-column">
+                  <h6 class="card-title mb-1">Beef Masala Semi-Gravy</h6>
+                  <p class="card-text small">Slow-cooked beef in a thick, spicy onion-tomato gravy with South Indian spices.</p>
+                  <div class="mt-auto d-flex justify-content-between align-items-center px-2">
+                    <span class="fw-bold">₹390</span>
+                    <a href="#" class="btn btn-sm btn-danger">Order</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="col">
+              <div class="card text-center" style="height: 320px; width: 100%; max-width: 280px; margin: auto;">
+                <img src="./image/butter-chicken.jpg" class="card-img-top" style="height: 140px; object-fit: cover;"
+                  alt="Mutton Chukka">
+                <div class="card-body p-2 d-flex flex-column">
+                  <h6 class="card-title mb-1">Butter Chicken</h6>
+                  <p class="card-text small">Tender chicken pieces in a creamy, mildly spiced tomato-butter gravy.</p>
+                  <div class="mt-auto d-flex justify-content-between align-items-center px-2">
+                    <span class="fw-bold">₹170</span>
+                    <a href="#" class="btn btn-sm btn-danger">Order</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="col">
+              <div class="card text-center" style="height: 320px; width: 100%; max-width: 280px; margin: auto;">
+                <img src="./image/Chicken-Chettinad.jpg" class="card-img-top" style="height: 140px; object-fit: cover;"
+                  alt="Egg Curry">
+                <div class="card-body p-2 d-flex flex-column">
+                  <h6 class="card-title mb-1">Chettinad Chicken</h6>
+                  <p class="card-text small">Fiery and aromatic chicken curry made with roasted Chettinad masala and coconut.</p>
+                  <div class="mt-auto d-flex justify-content-between align-items-center px-2">
+                    <span class="fw-bold">₹90</span>
+                    <a href="#" class="btn btn-sm btn-danger">Order</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 4 -->
+            <div class="col">
+              <div class="card text-center" style="height: 320px; width: 100%; max-width: 280px; margin: auto;">
+                <img src="./image/crab masala.jpg" class="card-img-top" style="height: 140px; object-fit: cover;"
+                  alt="Paneer Masala">
+                <div class="card-body p-2 d-flex flex-column">
+                  <h6 class="card-title mb-1">Crab Masala</h6>
+                  <p class="card-text small">Fresh crab simmered in a rich coastal-style gravy with pepper and curry leaves.</p>
+                  <div class="mt-auto d-flex justify-content-between align-items-center px-2">
+                    <span class="fw-bold">₹270</span>
+                    <a href="#" class="btn btn-sm btn-danger">Order</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 5 -->
+            <div class="col">
+              <div class="card text-center" style="height: 320px; width: 100%; max-width: 280px; margin: auto;">
+                <img src="./image/duck masala.jpg" class="card-img-top" style="height: 140px; object-fit: cover;"
+                  alt="Prawn Pepper Fry">
+                <div class="card-body p-2 d-flex flex-column">
+                  <h6 class="card-title mb-1">Duck Pepper Masala</h6>
+                  <p class="card-text small">Juicy duck pieces cooked in a bold, pepper-rich semi-gravy with shallots and ghee.</p>
+                  <div class="mt-auto d-flex justify-content-between align-items-center px-2">
+                    <span class="fw-bold">₹260</span>
+                    <a href="#" class="btn btn-sm btn-danger">Order</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 6 -->
+            <div class="col">
+              <div class="card text-center" style="height: 320px; width: 100%; max-width: 280px; margin: auto;">
+                <img src="./image/Nattu Kozhi Curry.jpg" class="card-img-top" style="height: 140px; object-fit: cover;"
+                  alt="Gobi Masala">
+                <div class="card-body p-2 d-flex flex-column">
+                  <h6 class="card-title mb-1">Nattu Kozhi Curry</h6>
+                  <p class="card-text small">Country chicken in a traditional village-style semi-gravy with native spices.</p>
+                  <div class="mt-auto d-flex justify-content-between align-items-center px-2">
+                    <span class="fw-bold">₹190</span>
+                    <a href="#" class="btn btn-sm btn-danger">Order</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 7 -->
+            <div class="col">
+              <div class="card text-center" style="height: 320px; width: 100%; max-width: 280px; margin: auto;">
+                <img src="./image/Meen Kuzhambu.jpg" class="card-img-top" style="height: 140px; object-fit: cover;"
+                  alt="Pepper Chicken">
+                <div class="card-body p-2 d-flex flex-column">
+                  <h6 class="card-title mb-1">Meen Kuzhambu</h6>
+                  <p class="card-text small">Tamarind-based fish curry simmered in flavorful South Indian masala.</p>
+                  <div class="mt-auto d-flex justify-content-between align-items-center px-2">
+                    <span class="fw-bold">₹250</span>
+                    <a href="#" class="btn btn-sm btn-danger">Order</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 8 -->
+            <div class="col">
+              <div class="card text-center" style="height: 320px; width: 100%; max-width: 280px; margin: auto;">
+                <img src="./image/Mutton Chukka Gravy 1.jpg" class="card-img-top" style="height: 140px; object-fit: cover;"
+                  alt="Mushroom Masala">
+                <div class="card-body p-2 d-flex flex-column">
+                  <h6 class="card-title mb-1">Mutton Chukka Gravy</h6>
+                  <p class="card-text small">Spicy mutton pieces coated in a semi-thick chukka-style masala gravy.</p>
+                  <div class="mt-auto d-flex justify-content-between align-items-center px-2">
+                    <span class="fw-bold">₹270</span>
+                    <a href="#" class="btn btn-sm btn-danger">Order</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 9 -->
+            <div class="col">
+              <div class="card text-center" style="height: 320px; width: 100%; max-width: 280px; margin: auto;">
+                <img src="./image/Turkey Gravy Roast.jpg" class="card-img-top" style="height: 140px; object-fit: cover;"
+                  alt="Special Gravy Mix">
+                <div class="card-body p-2 d-flex flex-column">
+                  <h6 class="card-title mb-1">Turkey Gravy Roast</h6>
+                  <p class="card-text small">Marinated turkey slow-cooked in traditional masala with a semi-dry finish.</p>
+                  <div class="mt-auto d-flex justify-content-between align-items-center px-2">
+                    <span class="fw-bold">₹190</span>
+                    <a href="#" class="btn btn-sm btn-danger">Order</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      <!-- BEVERAGES SECTION -->
+      <section id="beverages" class="py-5 bg-black text-white">
+        <div class="container">
+          <h2 class="text-center mb-4 text-white">Beverages</h2>
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+
+            <!-- CARD 1 -->
+            <div class="col">
+              <div class="card text-center" style="height: 320px; width: 100%; max-width: 280px; margin: auto;">
+                <img src="./image/rose milk.jpg" class="card-img-top" style="height: 150px; object-fit: cover;"
+                  alt="Lime Juice">
+                <div class="card-body p-2 d-flex flex-column">
+                  <h6 class="card-title mb-1">Rose Milk</h6>
+                  <p class="card-text small">A sweet and aromatic chilled milk drink flavored with rose syrup.</p>
+                  <div class="mt-auto d-flex justify-content-between align-items-center px-2">
+                    <span class="fw-bold">₹80</span>
+                    <a href="#" class="btn btn-sm btn-danger">Order</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="col">
+              <div class="card text-center" style="height: 320px; width: 100%; max-width: 280px; margin: auto;">
+                <img src="./image/lemonade.jpg" class="card-img-top" style="height: 150px; object-fit: cover;"
+                  alt="Rose Milk">
+                <div class="card-body p-2 d-flex flex-column">
+                  <h6 class="card-title mb-1">Lemon Mint Cooler</h6>
+                  <p class="card-text small">Fresh lemon juice blended with mint leaves, a hint of black salt, and ice.</p>
+                  <div class="mt-auto d-flex justify-content-between align-items-center px-2">
+                    <span class="fw-bold">₹70</span>
+                    <a href="#" class="btn btn-sm btn-danger">Order</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="col">
+              <div class="card text-center" style="height: 320px; width: 100%; max-width: 280px; margin: auto;">
+                <img src="./image/Blue Curacao Mojito.jpg" class="card-img-top" style="height: 140px; object-fit: cover;"
+                  alt="Butter Milk">
+                <div class="card-body p-2 d-flex flex-column">
+                  <h6 class="card-title mb-1">Blue Curacao Mojito </h6>
+                  <p class="card-text small">A vibrant and tropical blue drink made with lemon juice, soda, mint leaves, and blue curacao syrup.</p>
+                  <div class="mt-auto d-flex justify-content-between align-items-center px-2">
+                    <span class="fw-bold">₹150</span>
+                    <a href="#" class="btn btn-sm btn-danger">Order</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 4 -->
+            <div class="col">
+              <div class="card text-center" style="height: 320px; width: 100%; max-width: 280px; margin: auto;">
+                <img src="./image/Filter-Coffee.jpg" class="card-img-top" style="height: 140px; object-fit: cover;"
+                  alt="Cold Coffee">
+                <div class="card-body p-2 d-flex flex-column">
+                  <h6 class="card-title mb-1">Filter Coffee</h6>
+                  <p class="card-text small">Traditional South Indian strong coffee made using a metal filter, served with frothy milk and sugar.</p>
+                  <div class="mt-auto d-flex justify-content-between align-items-center px-2">
+                    <span class="fw-bold">₹30</span>
+                    <a href="#" class="btn btn-sm btn-danger">Order</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 5 -->
+            <div class="col">
+              <div class="card text-center" style="height: 320px; width: 100%; max-width: 280px; margin: auto;">
+                <img src="./image/Masala Chai.jpg" class="card-img-top" style="height: 140px; object-fit: cover;"
+                  alt="Mango Juice">
+                <div class="card-body p-2 d-flex flex-column">
+                  <h6 class="card-title mb-1">Masala Chai</h6>
+                  <p class="card-text small">Spiced Indian tea brewed with ginger, cardamom, cloves, and cinnamon. </p>
+                  <div class="mt-auto d-flex justify-content-between align-items-center px-2">
+                    <span class="fw-bold">₹20</span>
+                    <a href="#" class="btn btn-sm btn-danger">Order</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 6 -->
+            <div class="col">
+              <div class="card text-center" style="height: 320px; width: 100%; max-width: 280px; margin: auto;">
+                <img src="./image/Sukku Malli Coffee.jpg" class="card-img-top" style="height: 140px; object-fit: cover;"
+                  alt="Masala Soda">
+                <div class="card-body p-2 d-flex flex-column">
+                  <h6 class="card-title mb-1">Sukku Malli Coffee</h6>
+                  <p class="card-text small">A herbal drink made with dry ginger (sukku), coriander seeds (malli), and jaggery.</p>
+                  <div class="mt-auto d-flex justify-content-between align-items-center px-2">
+                    <span class="fw-bold">₹35</span>
+                    <a href="#" class="btn btn-sm btn-danger">Order</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      <!-- DESSERTS SECTION -->
+      <section id="desserts" class="py-5 bg-black text-white">
+        <div class="container">
+          <h2 class="text-center mb-4 text-white">Desserts</h2>
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+
+            <!-- CARD 1 -->
+            <div class="col">
+              <div class="card text-center" style="height: 320px; width: 100%; max-width: 280px; margin: auto;">
+                <img src="./image/Gulab-Jamun.jpg" class="card-img-top" style="height: 140px; object-fit: cover;"
+                  alt="Gulab Jamun">
+                <div class="card-body p-2 d-flex flex-column">
+                  <h6 class="card-title mb-1">Gulab Jamun</h6>
+                  <p class="card-text small">Soft and syrup-soaked sweet dumplings.</p>
+                  <div class="mt-auto d-flex justify-content-between align-items-center px-2">
+                    <span class="fw-bold">₹50</span>
+                    <a href="#" class="btn btn-sm btn-danger">Order</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="col">
+              <div class="card text-center" style="height: 320px; width: 100%; max-width: 280px; margin: auto;">
+                <img src="./image/Ras-Malai.jpg" class="card-img-top" style="height: 140px; object-fit: cover;"
+                  alt="Rasmalai">
+                <div class="card-body p-2 d-flex flex-column">
+                  <h6 class="card-title mb-1">Rasmalai</h6>
+                  <p class="card-text small">Creamy, cardamom-flavored milk dessert.</p>
+                  <div class="mt-auto d-flex justify-content-between align-items-center px-2">
+                    <span class="fw-bold">₹70</span>
+                    <a href="#" class="btn btn-sm btn-danger">Order</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="col">
+              <div class="card text-center" style="height: 320px; width: 100%; max-width: 280px; margin: auto;">
+                <img src="./image/black forest cake.jpg" class="card-img-top" style="height: 140px; object-fit: cover;"
+                  alt="Kesari">
+                <div class="card-body p-2 d-flex flex-column">
+                  <h6 class="card-title mb-1">Black Forest Cake</h6>
+                  <p class="card-text small"> A rich chocolate sponge layered with whipped cream and cherries, topped with chocolate shavings.</p>
+                  <div class="mt-auto d-flex justify-content-between align-items-center px-2">
+                    <span class="fw-bold">₹30</span>
+                    <a href="#" class="btn btn-sm btn-danger">Order</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 4 -->
+            <div class="col">
+              <div class="card text-center" style="height: 320px; width: 100%; max-width: 280px; margin: auto;">
+                <img src="./image/brownie.jpg" class="card-img-top" style="height: 140px; object-fit: cover;"
+                  alt="Carrot Halwa">
+                <div class="card-body p-2 d-flex flex-column">
+                  <h6 class="card-title mb-1">Brownie with Ice Cream</h6>
+                  <p class="card-text small">Fudgy brownie served warm with vanilla ice cream.</p>
+                  <div class="mt-auto d-flex justify-content-between align-items-center px-2">
+                    <span class="fw-bold">₹60</span>
+                    <a href="#" class="btn btn-sm btn-danger">Order</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 5 -->
+            <div class="col">
+              <div class="card text-center" style="height: 320px; width: 100%; max-width: 280px; margin: auto;">
+                <img src="./image/Choco Chip Pancakes.jpg" class="card-img-top" style="height: 140px; object-fit: cover;"
+                  alt="Ice Cream">
+                <div class="card-body p-2 d-flex flex-column">
+                  <h6 class="card-title mb-1">Choco Chip Pancakes</h6>
+                  <p class="card-text small"> Fluffy pancakes loaded with chocolate chips and maple syrup.</p>
+                  <div class="mt-auto d-flex justify-content-between align-items-center px-2">
+                    <span class="fw-bold">₹100</span>
+                    <a href="#" class="btn btn-sm btn-danger">Order</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 6 -->
+            <div class="col">
+              <div class="card text-center" style="height: 320px; width: 100%; max-width: 280px; margin: auto;">
+                <img src="./image/Vanilla Pudding Parfait.jpg" class="card-img-top" style="height: 140px; object-fit: cover;"
+                  alt="Fruit Salad">
+                <div class="card-body p-2 d-flex flex-column">
+                  <h6 class="card-title mb-1">Vanilla Pudding Parfait</h6>
+                  <p class="card-text small">Creamy vanilla pudding layered with fruits and granola.</p>
+                  <div class="mt-auto d-flex justify-content-between align-items-center px-2">
+                    <span class="fw-bold">₹150</span>
+                    <a href="#" class="btn btn-sm btn-danger">Order</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+
+
+      <!-- Item Modal -->
+      <div class="modal fade" id="itemModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content text-center">
+            <div class="modal-header">
+              <h5 class="modal-title">Item Details</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+              <p>This item is a delicious traditional South Indian dish!</p>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-warning" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reservation Form -->
+      <section id="reservation" class="py-5 bg-dark text-white">
+        <div class="container">
+          <h2 class="text-center mb-4">Book a Table</h2>
+          <form class="mx-auto" style="max-width: 500px;">
+            <div class="mb-3">
+              <input type="text" class="form-control" placeholder="Your Name" required />
+            </div>
+            <div class="mb-3">
+              <input type="email" class="form-control" placeholder="Your Email" required />
+            </div>
+            <div class="mb-3">
+              <input type="date" class="form-control" required />
+            </div>
+            <div class="mb-3">
+              <input type="time" class="form-control" required />
+            </div>
+            <button class="btn btn-warning w-100">Reserve Now</button>
+          </form>
+        </div>
+      </section>
+
+      <section id="contact" class="py-5 bg-black">
+        <div class="container">
+          <h2 class="text-center mb-4 text-danger">📞 Contact Us</h2>
+          <div class="row text-center text-md-start">
+            <div class="col-md-6 mb-4">
+              <h5 class="text-light fw-bold">📍 Address</h5>
+              <p class="text-light">No. 12, Anna Salai,<br>Chennai, Tamil Nadu - 600002</p>
+
+              <h5 class="text-light fw-bold">📞 Phone</h5>
+              <p class="text-light">+91 98765 43210</p>
+
+              <h5 class="text-light fw-bold">📧 Email</h5>
+              <p>support@spicefood.com</p>
+
+              <h5 class="text-light fw-bold">⏰ Opening Hours</h5>
+              <p class="text-light">Mon - Sun: 11:00 AM to 11:00 PM</p>
+            </div>
+
+            <div class="col-md-6">
+              <h5 class="text-light fw-bold">Send a Message</h5>
+              <form>
+                <div class="mb-3">
+                  <input type="text" class="form-control" placeholder="Your Name" required>
+                </div>
+                <div class="mb-3">
+                  <input type="email" class="form-control" placeholder="Your Email" required>
+                </div>
+                <div class="mb-3">
+                  <textarea class="form-control" rows="4" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-danger px-4">Send</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Footer -->
+      <footer class="bg-black text-center text-white py-3">
+        <small>© 2025 South Flavors Restaurant</small>
+      </footer>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
